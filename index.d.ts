@@ -261,6 +261,7 @@ declare module "@zip.js/zip.js" {
     type ZipDirectoryEntryExportOptions = EntryDataOnprogressOption & ExportOptions & ZipWriterConstructorOptions;
 
     export interface FS extends ZipDirectoryEntry {
+        new ();
         root: ZipDirectoryEntry;
         remove(entry: ZipEntry): void;
         move(entry: ZipEntry, destination: ZipDirectoryEntry): void;
